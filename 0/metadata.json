@@ -27,22 +27,7 @@
     "cache_creation_tokens": 0,
     "cache_read_tokens": 52899712,
     "output_tokens": 215134,
-    "api_call_count": 96,
-    "subagent_tokens_complete": false
-  },
-  "redaction": {
-    "replacements": 1433,
-    "layers": {
-      "betterleaks": 0,
-      "connection_string": 0,
-      "credential_key": 0,
-      "credential_value": 0,
-      "credentialed_uri": 0,
-      "entropy": 1470,
-      "key_context": 0,
-      "provider_token": 0,
-      "shell_stdin": 0
-    }
+    "api_call_count": 96
   },
   "session_metrics": {
     "turn_count": 7
