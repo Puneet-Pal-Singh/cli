@@ -1,0 +1,47 @@
+Should we work on new PR?
+
+Which one like, which is the second best senior contribution?
+```markdown
+Updated local `main` and the audit worktree to **`711697ee5`**, matching your synced fork. Local `main` is clean; our reproduction tests are preserved.
+
+**Both main bugs still reproduce.** The merged [#2876](https://github.com/entireio/cli/pull/2876) and [#2999](https://github.com/entireio/cli/pull/2999) changed checkpoint delivery/replay, but **did not fix our cross-clone content-loss case**.
+
+I checked the current public inventory—132 open issues and 233 open PRs—plus targeted searches through closed/merged work.
+
+“None found” below means **no exact public implementation found**, not guaranteed absence of private work. “Source present” means code inspection today, without rerunning that older reproduction.
+
+| # | Finding | Still relevant? | Has someone picked it up? / Recommendation |
+|---|---|---|---|
+| 1 | **Checkpoint replay drops another clone’s session** | **Yes—reproduced today**, including the current generation-aware queue | No exact fix found. Adjacent recovery tests in [#1638](https://github.com/entireio/cli/pull/1638). **Best first contribution.** |
+| 2 | **Generated summary gets saved on the wrong session** | **Yes—reproduced today** | No exact implementation found. **Good second contribution.** |
+| 3 | Runner tailoring overwrites intervening edits | **No—obsolete** | Feature removed by merged [#2946](https://github.com/entireio/cli/pull/2946). Skip. |
+| 4 | `experts --staged` mishandles quoted/Unicode filenames | Source present, unchanged | No exact fix found. [#2586](https://github.com/entireio/cli/pull/2586) addresses strategy hooks, a different path. Available candidate. |
+| 5 | Failed diagnostic bundle truncates an existing archive | Source present, unchanged | No exact fix found. Useful data-preservation contribution. |
+| 6 | Idle MCP server blocks despite context cancellation | Source present, unchanged | No exact fix found. Worth pursuing with process/signal and reader-ownership tests. |
+| 7 | Log following misses output after copy-truncation | Source present, unchanged | No exact fix found. Smaller operational fix. |
+| 8 | Suggested insertion into an existing empty file fails | Source present, unchanged | No exact fix found. [#2984](https://github.com/entireio/cli/pull/2984) changes patch rendering, not this anchor logic. |
+| 9 | SSE cursor-only frames and empty cursor resets mishandled | Source present, unchanged | No exact fix found. Protocol candidate; actual server emission frequency remains unverified. |
+| 10 | SSE JSON output rounds large integers | Source present, unchanged | No exact fix found. Small integrity fix. |
+| 11 | `entire api -F` rounds integers outside `int64` | Source present, unchanged | No exact fix found. Small passthrough fix. |
+| 12 | Token subtraction recursion lacks a depth limit | Source present, unchanged | **Overlapping active work:** [#2155](https://github.com/entireio/cli/pull/2155), [#2825](https://github.com/entireio/cli/pull/2825), [#2782](https://github.com/entireio/cli/pull/2782). Coordinate; not a clean independent project. |
+| 13 | Stale semantic-search results overwrite a newer query | Source condition remains | No exact fix found. Refresh the focused reproduction before choosing it. |
+| 14 | Search pagination drops lower-bound count metadata | Source condition remains | No exact fix found. Lower-priority candidate. |
+| 15 | Resume misses checkpoints on merge second-parent history | First-parent traversal remains | Intent-dependent: code explicitly documents this policy. **Do not present it as a confirmed fresh bug yet.** |
+
+**The larger existing issues we previously shortlisted:**
+
+| Existing issue | Current public ownership | Worth picking up? |
+|---|---|---|
+| [#2580 — Git config-based hooks](https://github.com/entireio/cli/issues/2580) | Open, unassigned; no implementation claim or implementing PR found | **Yes, substantial design candidate.** Coordinate with the active Lefthook work and resolve mixed-Git-version behavior. |
+| [#763 — pre-flight knowledge/context metadata](https://github.com/entireio/cli/issues/763) | Open, unassigned, no comments or implementing PR found | Available discussion candidate. Requires product/schema agreement. |
+| [#2794 — checkpoint push interferes with code push](https://github.com/entireio/cli/issues/2794) | Open and unassigned, but [#2715](https://github.com/entireio/cli/pull/2715) addresses related push ordering | **Coordinate rather than start a competing implementation.** |
+| [#1304 — winget installation](https://github.com/entireio/cli/issues/1304) | Open, unassigned; no Entire PR found | Packaging candidate. Live catalog verification still needed; lower priority for your goal. |
+
+**My recommendation remains #1, then #2.** They have current failing reproductions and concrete correctness invariants. Existing recovery and summary baseline tests pass. Runner tailoring should leave our shortlist entirely.
+
+The [complete updated status report](/Users/puneetpalsingh/.codex/visualizations/2026/08/29/01a04f64-c1f6-7c73-b864-349e3f8c9782/entire-issue-status-2026-11-03.md) includes source links, ownership checks, verification details, and the earlier dropped proposals/team tracking issues.
+
+Check these. true or not?
+should we work on the first one?
+If we work on first how to reproduce it for the maintainers for easy review and merge .
+```
