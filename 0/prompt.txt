@@ -1,0 +1,55 @@
+# AGENTS.md instructions for /Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli
+
+<INSTRUCTIONS>
+# Local Entire contribution coordination
+
+First read and follow `CLAUDE.md` in this checkout in full. This local discovery
+file supplements those repository rules; it does not relax or replace them.
+Keep the existing `AGENTS.md` symlink intact.
+
+Before finding, choosing, implementing or reporting contribution work, read the
+canonical shared tracker:
+`/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli/CONTRIBUTION_TRACKER.md`.
+
+Update that file when findings, ownership, decisions or implementation stages
+change. Preserve stable IDs and other chats' edits. Recheck dated public evidence
+before claiming availability. Record the working chat/worktree before starting a
+fix. Test-only work is not implementation, and an open PR is not a merged fix.
+Do not revive ideas the user dropped or duplicate another contributor's claim.
+
+Keep this pointer and the tracker local, out of upstream PRs. For a new worktree,
+carry this pointer forward and keep using the canonical file; do not fork the
+tracker. Existing running chats may need an explicit instruction to read it.
+
+Before starting any new implementation, require PASS on all three tracker gates:
+current legitimate failure/measurement, substantial justified engineering scope,
+and fresh novelty/ownership clearance including inline PR review comments.
+Unknown is HOLD. Existing exact reports fail the user’s strict novelty gate even
+if still unfixed. Only READY permits new implementation; existing work and dated
+historical recommendations do not bypass this rule.
+
+Commit policy for this contribution batch: one coherent task scope per commit,
+including its regression tests. No unrelated multi-task bundles or intentionally
+failing commits. Run `mise run check` before every commit and latest formatting
+then `mise run lint` before every push. See the canonical tracker for the
+authorized serial three-contribution schedule, publishing and recovery rules.
+
+</INSTRUCTIONS>
+
+---
+
+<environment_context>
+  <cwd>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli</cwd>
+  <shell>zsh</shell>
+  <current_date>2026-11-06</current_date>
+  <timezone>Asia/Kolkata</timezone>
+  <filesystem><workspace_roots><root>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli</root><root>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox</root></workspace_roots><permission_profile type="managed"><file_system type="restricted"><entry access="read"><special>:root</special></entry><entry access="write"><path>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli</path></entry><entry access="write"><path>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox</path></entry><entry access="write"><special>:slash_tmp</special></entry><entry access="write"><special>:tmpdir</special></entry><entry access="write"><path>/Users/puneetpalsingh/.codex/visualizations/2026/11/05/01a1ad2f-dc25-7103-ab06-dcf9f6c1ee1e</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli/.git</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox/.git</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli/.agents</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox/.agents</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli/.codex</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox/.codex</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli/.aws</path></entry><entry access="read"><path>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox/.aws</path></entry></file_system></permission_profile></filesystem>
+</environment_context>
+
+---
+
+<environment_context>
+  <current_date>2026-11-06</current_date>
+  <timezone>Asia/Kolkata</timezone>
+  <filesystem><workspace_roots><root>/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli</root><root>/Users/puneetpalsingh/Documents/Code/dev/Shadowbox/shadowbox</root><root>/Users/puneetpalsingh/.codex/visualizations/2026/11/05/01a1ad2f-dc25-7103-ab06-dcf9f6c1ee1e</root></workspace_roots><permission_profile type="disabled"><file_system type="unrestricted" /></permission_profile></filesystem>
+</environment_context>
