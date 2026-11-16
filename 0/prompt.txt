@@ -1,0 +1,14 @@
+update the PR with the base branch bro. as main has moved?
+
+---
+
+check if true?
+**\`Confirmed P2 bug:** recovery stalls when the remote already contains the final transcript, but your local finalization also adds independent data, such as a prompt. The cumulative change merges cleanly; commit-by-commit recovery rejects it and leaves the ref queued. Reproduced with real writers and under race detection. **No data loss demonstrated.\`**
+
+---
+
+Wht is this bug, I don't get it , is this just, merge conflict b/w remote and PR??
+
+---
+
+Cool fix this in our existing PR bro, Test it properly before pushing.
