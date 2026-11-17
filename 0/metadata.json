@@ -1,0 +1,103 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M7NFJB3J7KZ4E99CKAKBW78H",
+  "session_id": "01a1db58-d488-72c1-8f68-19217bcee3e0",
+  "strategy": "manual-commit",
+  "created_at": "2026-11-17T19:26:07.85773Z",
+  "branch": "fix/preserve-concurrent-checkpoint-sessions",
+  "checkpoints_count": 3,
+  "save_step_count": 3,
+  "files_touched": [
+    "cmd/entire/cli/strategy/checkpoint_replay_test.go",
+    "cmd/entire/cli/strategy/checkpoint_replay_tree_test.go",
+    "cmd/entire/cli/strategy/metadata_reconcile.go",
+    "docs/architecture/ref-checkpoint-backend.md",
+    "docs/development/checkpoint-implementation.md"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "3358a3ad80f4",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 783606,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 67073152,
+    "output_tokens": 294196,
+    "api_call_count": 344
+  },
+  "session_metrics": {
+    "turn_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-11-17T19:26:06.967849Z",
+    "agent_lines": 0,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 15,
+    "human_removed": 152,
+    "total_committed": 0,
+    "total_lines_changed": 167,
+    "agent_percentage": 0,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 875,
+      "user_lines_removed": 15,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/config.toml": 3,
+        "AGENTS.override.md": 32,
+        "CONTRIBUTION_TRACKER.md": 688,
+        "cmd/entire/cli/strategy/checkpoint_replay_test.go": 77,
+        "cmd/entire/cli/strategy/checkpoint_replay_tree_test.go": 61,
+        "cmd/entire/cli/strategy/metadata_reconcile.go": 12,
+        "docs/architecture/ref-checkpoint-backend.md": 1,
+        "docs/development/checkpoint-implementation.md": 1
+      },
+      "user_removed_per_file": {
+        "cmd/entire/cli/strategy/metadata_reconcile.go": 13,
+        "docs/architecture/ref-checkpoint-backend.md": 1,
+        "docs/development/checkpoint-implementation.md": 1
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 738,
+      "user_lines_removed": 0,
+      "agent_lines_added": 152,
+      "agent_lines_removed": 15,
+      "user_added_per_file": {
+        ".codex/config.toml": 3,
+        "AGENTS.override.md": 32,
+        "CONTRIBUTION_TRACKER.md": 703
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 751,
+      "user_lines_removed": 0,
+      "agent_lines_added": 152,
+      "agent_lines_removed": 15,
+      "user_added_per_file": {
+        ".codex/config.toml": 3,
+        "AGENTS.override.md": 32,
+        "CONTRIBUTION_TRACKER.md": 716
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 758,
+      "user_lines_removed": 0,
+      "agent_lines_added": 152,
+      "agent_lines_removed": 15,
+      "user_added_per_file": {
+        ".codex/config.toml": 3,
+        "AGENTS.override.md": 32,
+        "CONTRIBUTION_TRACKER.md": 723
+      }
+    }
+  ]
+}

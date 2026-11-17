@@ -1,0 +1,30 @@
+{
+  "cli_version": "0.10.6",
+  "checkpoint_id": "01M7NFJB3J7KZ4E99CKAKBW78H",
+  "strategy": "manual-commit",
+  "branch": "fix/preserve-concurrent-checkpoint-sessions",
+  "checkpoints_count": 3,
+  "files_touched": [
+    "cmd/entire/cli/strategy/checkpoint_replay_test.go",
+    "cmd/entire/cli/strategy/checkpoint_replay_tree_test.go",
+    "cmd/entire/cli/strategy/metadata_reconcile.go",
+    "docs/architecture/ref-checkpoint-backend.md",
+    "docs/development/checkpoint-implementation.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 783606,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 67073152,
+    "output_tokens": 294196,
+    "api_call_count": 344
+  }
+}

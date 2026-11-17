@@ -1,0 +1,49 @@
+Work on ENH-004: persistent, revision-verified lexical indexing for Brain fact retrieval.\
+\
+Read these first:\
+/Users/puneetpalsingh/.codex/entire-enh004-plan-2026-11-14/implementation-plan.json\
+/Users/puneetpalsingh/Documents/Code/OSSplayground/Entire/cli/CONTRIBUTION_TRACKER.md\
+\
+Follow the target repository’s instructions. Refresh the three tracker gates—including current measurements and novelty/ownership checks with inline PR reviews—before production implementation. Continue research and isolated probes while any gate remains HOLD.\
+\
+Our Brain PR #644 already optimizes BM25 and fact loading. Measure incremental benefit against its latest implementation/current landing state, and preserve its owned branch.\
+\
+After all gates PASS, use a separate worktree and implement the smallest justified design locally. Preserve ranking, filtering, source identity, cancellation and canonical-storage behavior. Prove index freshness, concurrent-write safety, rebuild/fallback and reuse across CLI processes.\
+\
+Include reproducible latency, peak-memory, index-size and build/write-cost comparisons. Follow the plan’s test matrix and required checks; run mise run check before every coherent commit.\
+\
+Finish with a tested local patch and review summary. Do not push, publish an issue/PR, install plugins or run paid agents.
+
+use cloud agents for parallel work as it reduces local dependency
+
+---
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_6cf85d99f59542ae965499f63cc10f1e\",0]","question":"Cloud tasks are available, but the tools don’t expose whether they consume paid credits. Your no-paid-agents limit prevents me from launching one without that information. Can cloud agents use your included plan quota, or should I keep execution local?","answer":"Keep execution local"}]
+</send_user_message_question_reply>
+
+---
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_437251ad215042d0baba9e205a96669c\",0]","question":"What current Brain workflow needs faster fact retrieval—for example, an approximate fact count and query frequency? Public records show corpora up to about 3,077 facts; the 10k/50k benchmarks are synthetic, so practical need remains a gate to verify.","answer":"I dont get this? means you want a practical example for this if yes the cool find it and reproduce the feature in that, it will be easier for the maintainer to merge this?"}]
+</send_user_message_question_reply>
+
+---
+
+I don't get it?
+
+what does this mean?
+
+\`Each independent command is equivalent to:\
+&#x20; brain-pr644 workspace query cursor-hook-migration "How should an Entire-managed Cursor hook be migrated when reinstalling changes its wrapper between sh and cmd.exe?" --source fact --limit 10 --json\`
+
+
+
+what is cursor-hook-migration here  ???
+
+
+
+1. is this feature implementented fully? ENH-004
+2. We don't increase latency / memory or or degrade other performance with this feature?
+3. Does our reproduction of this feature in the repowas succressful is it good edition?&#x20;
+4. what positives/pros we are telling the maintainers about this feature???
