@@ -1,0 +1,131 @@
+| Rank  | Finding                                             | Evidence now                                                                                                                                                               | Decision                                                                                |
+| ----- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **1** | **MCP server ignores shutdown cancellation**        | Real CLI answers a ping, stays alive after the first SIGTERM with stdin open, exits after the second. No exact duplicate found in scoped searches and originating reviews. | **Ready.** Meaningful systems work: cancellation, input ownership and resource cleanup. |
+| **2** | **SSE reconnect cursor handling**                   | Tests reproduce lost cursor updates and ignored resets.                                                                                                                    | **Hold.** Verify Entire’s server contract and practical impact first.                   |
+| **3** | **Failed doctor bundle overwrites existing output** | A refused operation changes an existing file into an empty ZIP.                                                                                                            | **Focused fallback.** Real bug, but insufficient scope for your flagship goal.          |
+
+
+
+
+
+check the first one&#x20;
+
+if it passes this&#x20;
+
+it should be
+
+1. legit issue?
+2. Senior issue?
+3. Should be New issue and if already raised by some other like issue or PR then skip.
+
+
+
+then start working on issue 1.
+
+---
+
+Commit rules as to do multiple smaller tasks wise commits , means every small task scope one commit, not like 20 files and one commit. Got it?
+
+---
+
+yes then do it and create a ISSUE and PR. check my and soph old issue and PR for better understanding of issues and PRs.
+
+---
+
+Review this PR if its done or not?
+
+1. It should be good feature/ legit addition no bluff.&#x20;
+2. No errors should be here.&#x20;
+3. it should be simple
+
+---
+
+Complete and ship this then?&#x20;
+must be independent feature means no other duplicates should be there in the repo for this issue / PR??
+
+---
+
+We have to be 100% sure for it to be merge ready for maintainers. be brutal in review and fix those issues..
+
+---
+
+Commit the code also from time to time plese in task wise commits,
+means one small task like 3,4 files changes one commit, not like we do 20 files changes and 1 commit, must be multiple commits.
+
+---
+
+and what implementation we are doing now?&#x20;
+we have to keep the implementation simple as possible okay.
+
+---
+
+why is taking so long?
+
+---
+
+If those tests also fail on unchanged upstream, why are they blocking our fix? Tell me exactly what is left before we can make the small commits and create the issue and PR.
+
+and why the tf lint took 22 minutes how to fix that? use some external service? or what?
+
+---
+
+explain to me again what are two failues we are getting?&#x20;
+is it using our code yes or no? Use simple words please.&#x20;
+If yes how to fix them??
+if no document it here and we will fix it??
+
+---
+
+So the upstream has these bugs okay cool,&#x20;
+does anyone created issue / PR for this yet????
+if no we will fix them, find them if the patch is already ther?
+
+---
+
+Two things.
+First, update the copy of the project first both local and orign with the upstream and then check if still fails or not?
+as pathes are there for both failures?
+
+---
+
+first explain to me what are these failures,??? with an simple example.?
+
+---
+
+Check if the first failure is an outdated test and find the root cause of the second. If it’s a real bug with no existing fix, we will fix it separately. Keep our MCP changes separate.
+and does our MCP changes merge ready???
+
+---
+
+Cool so these are not errors good,
+Now please complete our MCP issues implementation merge ready.
+
+---
+
+which checks left now??
+
+---
+
+Give full list of tests which we need to run everytime
+
+---
+
+Running these tests took 55 minutes last time.
+
+---
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_44523dff9a934db1a2b019f90b76e453\",0]","question":"Your AGENTS.md/tracker requires a full `mise run check` before every commit. To avoid repeating the whole repository suite for the second, test-only commit, may I use a one-time exception: finish the current full check for the production fix, then run the complete main-package tests, MCP race tests and lint for the inherited-stdin test commit? Windows compilation, complexity and PR CI checks would still be required.","answer":"Oh so this was the problem, \nwe should run these test only once per PR. \nwhich is usually the way. not every commit bro."}]
+</send_user_message_question_reply>
+
+---
+
+which check took many mutes so far document it here, it is an issue.
+
+---
+
+which check took many minutes so far document it here, it is an issue bro.
+
+---
+
+Bro we are still running checks? how many tests left?
